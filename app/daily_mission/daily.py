@@ -1,7 +1,7 @@
 import datetime
 import aiohttp
 import json
-from app.daily_mission.i18n import ZH_CN
+from daily_mission.i18n import ZH_CN
 
 URL = "https://mabi.world/sm/mww/{}/{}/{}.json"
 
