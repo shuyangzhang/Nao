@@ -21,6 +21,7 @@ KR = {
 	"Lingering Darkness": "남아있는 어둠",
 	"Enemy Behind": "등 뒤의 적",
 	"The Other Alchemists": "또 다른 연금술사들",
+    "Sniper War": "또 다른 연금술사들",
 	"Ghost of Partholon": "파르홀론의 유령",
 	"Fomor Attack": "포워르의 습격",
 }
@@ -48,6 +49,7 @@ JP = {
 	"Lingering Darkness": "残された闇　「１～３人」",
 	"Enemy Behind": "背後の敵　「１～２人」",
 	"The Other Alchemists": "また別の錬金術師たち　「１～４人」",
+    "Sniper War": "また別の錬金術師たち　「１～４人」",
 	"Ghost of Partholon": "パルホロンの幽霊　「１～５人」",
 	"Fomor Attack": "ポウォールの襲撃　「１～５人」",
 }
@@ -75,6 +77,7 @@ EN = {
 	"Lingering Darkness": "Lingering Darkness (1~3)",
 	"Enemy Behind": "Enemy Behind (1~2)",
 	"The Other Alchemists": "The Other Alchemists (1~4)",
+    "Sniper War": "The Other Alchemists (1~4)",
 	"Ghost of Partholon": "Ghost of Partholon (1~5)",
 	"Fomor Attack": "Fomor Attack (1~5)",
 }
@@ -102,6 +105,7 @@ ZH_TW = {
 	"Lingering Darkness": "剩余的黑暗 (1~3)",
 	"Enemy Behind": "背后的敌人 (1~2)",
 	"The Other Alchemists": "另外的炼金术士 (1~4)",
+    "Sniper War": "另外的炼金术士 (1~4)",
 	"Ghost of Partholon": "幽灵 (1~5)",
 	"Fomor Attack": "弗魔族的袭击 (1~5)",
 }
@@ -129,6 +133,7 @@ ZH_CN = {
 	"Lingering Darkness": "剩余的黑暗 (1~3)",
 	"Enemy Behind": "背后的敌人 (1~2)",
 	"The Other Alchemists": "另外的炼金术士 (1~4)",
+    "Sniper War": "另外的炼金术士 (1~4)",
 	"Ghost of Partholon": "幽灵 (1~5)",
 	"Fomor Attack": "弗魔族的袭击 (1~5)",
 }
