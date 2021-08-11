@@ -24,6 +24,7 @@ KR = {
     "Sniper War": "또 다른 연금술사들",
 	"Ghost of Partholon": "파르홀론의 유령",
 	"Fomor Attack": "포워르의 습격",
+	"Shadow Realm Champion": "포워르의 습격",
 }
 
 JP = {
@@ -52,6 +53,7 @@ JP = {
     "Sniper War": "また別の錬金術師たち　「１～４人」",
 	"Ghost of Partholon": "パルホロンの幽霊　「１～５人」",
 	"Fomor Attack": "ポウォールの襲撃　「１～５人」",
+	"Shadow Realm Champion": "ポウォールの襲撃　「１～５人」",
 }
 
 EN = {
@@ -80,6 +82,7 @@ EN = {
     "Sniper War": "The Other Alchemists (1~4)",
 	"Ghost of Partholon": "Ghost of Partholon (1~5)",
 	"Fomor Attack": "Fomor Attack (1~5)",
+	"Shadow Realm Champion": "Fomor Attack (1~5)",
 }
 
 ZH_TW = {
@@ -108,6 +111,7 @@ ZH_TW = {
     "Sniper War": "另外的炼金术士 (1~4)",
 	"Ghost of Partholon": "幽灵 (1~5)",
 	"Fomor Attack": "弗魔族的袭击 (1~5)",
+	"Shadow Realm Champion": "弗魔族的袭击 (1~5)",
 }
 
 ZH_CN = {
@@ -136,4 +140,5 @@ ZH_CN = {
     "Sniper War": "另外的炼金术士 (1~4)",
 	"Ghost of Partholon": "幽灵 (1~5)",
 	"Fomor Attack": "弗魔族的袭击 (1~5)",
+	"Shadow Realm Champion": "弗魔族的袭击 (1~5)",
 }
