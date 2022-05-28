@@ -9,7 +9,7 @@ async def update_channel_name_by_message(msg: Message, channel_id: str, new_name
         "name": new_name,
     }
 
-    await msg.ctx.gate.request(method=method, route=round, json=json)    
+    await msg.ctx.gate.request(method=method, route=route, json=json)    
 
 async def update_channel_name_by_bot(bot: Bot, channel_id: str, new_name: str):
     method = "POST"
@@ -19,4 +19,4 @@ async def update_channel_name_by_bot(bot: Bot, channel_id: str, new_name: str):
         "name": new_name,
     }
 
-    await bot.client.gate.request(method=method, route=round, json=json)    
+    await bot.client.gate.request(method=method, route=route, json=json)    
