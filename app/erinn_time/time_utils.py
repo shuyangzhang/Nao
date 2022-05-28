@@ -25,7 +25,7 @@ async def get_erinn_time():
     duration_ms = int(duration.total_seconds() * 1000)
     erinn_today_ms = duration_ms % ERINN_TIME_PER_DAY
     erinn_hour = erinn_today_ms // ERINN_TIME_PER_HOUR
-    erinn_minute = erinn_today_ms % ERINN_TIME_PER_HOUR // ERINN_TIME_PER_MIN
+    erinn_minute = erinn_today_ms % ERINN_TIME_PER_HOUR // ERINN_TIME_PER_MIN // 10 * 10
     erinn_now = server_now.replace(hour=erinn_hour, minute=erinn_minute)
     time_str = datetime.datetime.strftime(erinn_now, "%H:%M %p") 
     return time_str
