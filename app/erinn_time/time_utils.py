@@ -1,12 +1,16 @@
 import datetime
 
-# from utils.channel_utils import update_channel_name
+from khl import Bot
+from utils.channel_utils import update_channel_name_by_bot
 
 
 ERINN_TIME_PER_MIN = 1500   # ms
 ERINN_TIME_PER_HOUR = 60 * ERINN_TIME_PER_MIN
 ERINN_TIME_PER_DAY = 24 * ERINN_TIME_PER_HOUR
 
+ERINN_TIME_CHANNEL_ID = "6600928158010205"
+SERVER_TIME_CHANNEL_ID = "7053938039769278"
+LOCAL_TIME_CHANNEL_ID = "6358058041876630"
 
 async def get_local_time():
     now = datetime.datetime.utcnow() + datetime.timedelta(hours=8)
@@ -29,6 +33,15 @@ async def get_erinn_time():
     erinn_now = server_now.replace(hour=erinn_hour, minute=erinn_minute)
     time_str = datetime.datetime.strftime(erinn_now, "%H:%M %p") 
     return time_str
+
+async def update_clock_on_channel_name(bot: Bot):
+    erinn_time = await get_erinn_time()
+    server_time = await get_server_time()
+    local_time = await get_local_time()
+    
+    await update_channel_name_by_bot(bot, ERINN_TIME_CHANNEL_ID, f"爱琳时间：　　{erinn_time}")
+    await update_channel_name_by_bot(bot, SERVER_TIME_CHANNEL_ID, f"服务器时间：　{server_time}")
+    await update_channel_name_by_bot(bot, LOCAL_TIME_CHANNEL_ID, f"北京时间：　　{local_time}")
 
 
 if __name__ == "__main__":

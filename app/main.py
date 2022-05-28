@@ -4,10 +4,12 @@ import os
 import traceback
 
 from daily_mission.daily import daily_mission
+from erinn_time.time_utils import update_clock_on_channel_name
 
+
+__version__ = "0.1.0"
 
 load_dotenv()
-
 token = os.environ.get("TOKEN")
 
 DEBUG = False
@@ -17,6 +19,10 @@ bot = Bot(token=token)
 @bot.command(name="ping")
 async def ping(msg: Message):
     await msg.channel.send("pong!")
+
+@bot.command(name="version")
+async def version(msg: Message):
+    await msg.channel.send(f"Version number: {__version__}")
 
 @bot.command(name="debug")
 async def debug(msg: Message):
@@ -29,8 +35,6 @@ async def debug(msg: Message):
             await msg.channel.send("debug switch is off")
     else:
         await msg.channel.send("permission denied")
-
-    await msg.channel.send(f"these users have recieved cdkeys: {cdkey_sent_list}")
 
 @bot.command(name="daily", aliases=["每日", "日常"])
 async def daily(msg: Message):
@@ -48,5 +52,11 @@ async def logout(msg: Message):
         raise KeyboardInterrupt()
     else:
         await msg.channel.send("permission denied")
+
+# repeated tasks
+@bot.task.add_interval(seconds=1)
+async def automatic_timer():
+    await update_clock_on_channel_name(bot=bot)
+
 
 bot.run()
