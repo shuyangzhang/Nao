@@ -30,7 +30,7 @@ async def debug(msg: Message):
     else:
         await msg.channel.send("permission denied")
 
-    await msg.ctx.send(f"these users have recieved cdkeys: {cdkey_sent_list}")
+    await msg.channel.send(f"these users have recieved cdkeys: {cdkey_sent_list}")
 
 @bot.command(name="daily", aliases=["每日", "日常"])
 async def daily(msg: Message):
