@@ -1,2 +1,2 @@
-# mabipro_bot
-MabiPro Information Integration Robot For KaiHeiLa (a discord-like voice platform)
+# Nao (MabiPro bot)
+Nao is a MabiPro information integration bot For KaiHeiLa (a discord-like voice platform)
