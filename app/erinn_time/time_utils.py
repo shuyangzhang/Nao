@@ -1,7 +1,7 @@
 import datetime
 
 from khl import Bot
-from utils.channel_utils import update_channel_name_by_bot
+from app.utils.channel_utils import update_channel_name_by_bot
 
 
 ERINN_TIME_PER_MIN = 1500   # ms
@@ -30,7 +30,7 @@ async def get_erinn_time():
     erinn_today_ms = duration_ms % ERINN_TIME_PER_DAY
     erinn_hour = erinn_today_ms // ERINN_TIME_PER_HOUR
     erinn_minute = erinn_today_ms % ERINN_TIME_PER_HOUR // ERINN_TIME_PER_MIN // 10 * 10
-    erinn_now = server_now.replace(hour=erinn_hour, minute=erinn_minute)
+    erinn_now = server_now.replace(hour=erinn_hour, minute=erinn_minute) + datetime.timedelta(minutes=10)
     time_str = datetime.datetime.strftime(erinn_now, "%H:%M %p") 
     return time_str
 
