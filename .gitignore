@@ -13,6 +13,7 @@ logs/
 
 ## env file
 .env
+.docker-env
 .python-version
 
 ## static files
