@@ -3,11 +3,11 @@ from dotenv import load_dotenv
 import os
 import traceback
 
-from daily_mission.daily import daily_mission
-from erinn_time.time_utils import update_clock_on_channel_name
+from app.daily_mission.daily import daily_mission
+from app.erinn_time.time_utils import update_clock_on_channel_name
 
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 load_dotenv()
 token = os.environ.get("TOKEN")
@@ -54,9 +54,6 @@ async def logout(msg: Message):
         await msg.channel.send("permission denied")
 
 # repeated tasks
-@bot.task.add_interval(seconds=1)
+@bot.task.add_interval(seconds=5)
 async def automatic_timer():
     await update_clock_on_channel_name(bot=bot)
-
-
-bot.run()
