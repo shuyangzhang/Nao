@@ -7,7 +7,7 @@ from app.daily_mission.daily import daily_mission_from_sigkill
 from app.erinn_time.time_utils import update_clock_on_channel_name
 
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 load_dotenv()
 token = os.environ.get("TOKEN")
