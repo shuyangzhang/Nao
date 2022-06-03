@@ -3,11 +3,11 @@ from dotenv import load_dotenv
 import os
 import traceback
 
-from app.daily_mission.daily import daily_mission
+from app.daily_mission.daily import daily_mission_from_sigkill
 from app.erinn_time.time_utils import update_clock_on_channel_name
 
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 load_dotenv()
 token = os.environ.get("TOKEN")
@@ -39,7 +39,7 @@ async def debug(msg: Message):
 @bot.command(name="daily", aliases=["每日", "日常"])
 async def daily(msg: Message):
     try:
-        daily_mission_text = await daily_mission()
+        daily_mission_text = await daily_mission_from_sigkill()
         await msg.channel.send(daily_mission_text)
     except:
         if DEBUG:
